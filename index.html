@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>KVSHS Admin Login</title> <link rel="stylesheet" href="styles.css"> 
+  </head>
+  <body class="bg-app-blue-new"> 
+    
+    <div class="h-screen w-screen flex flex-col items-center justify-start pt-16">
+      
+      <header class="mb-8 text-center">
+        <img src="assets/logo/Logo.png" alt="School Logo" 
+             class="w-28 h-28 mx-auto">
+      </header>
+      
+      <div class="w-full max-w-md bg-white px-12 pt-10 pb-20 rounded-xl shadow-lg border border-gray-200">
+        
+        <h2 class="text-2xl font-semibold text-center mb-4 text-gray-800">Admin Log in</h2>
+        
+        <form id="loginForm" class="space-y-6">
+          
+          <div>
+            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+            <input type="email" id="email" placeholder="Enter your email" required
+                   class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-link-blue">
+          </div>
+          
+          <div>
+            <div class="flex justify-between items-center mb-1">
+                <label for="password" class="text-sm font-medium text-gray-700">Password</label>
+                <a href="#" class="text-xs text-link-blue hover:underline">I forgot my password</a> 
+            </div>
+            <input type="password" id="password" placeholder="Your password" required
+                   class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-link-blue">
+          </div>
+          
+          <button type="submit" 
+                  class="w-full py-3 mt-4 border border-app-blue-light text-app-blue-light 
+                         rounded-lg text-lg font-medium hover:bg-app-blue-light hover:text-white transition">
+            Log in 
+          </button>
+        </form>
+      </div>
+      
+    </div>
+  </body>
+</html>
