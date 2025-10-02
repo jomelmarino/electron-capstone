@@ -1,0 +1,2 @@
+# Instruct GitHub to ignore the generated CSS file for language statistics
+styles.css linguist-generated=true
