@@ -2,7 +2,8 @@
 module.exports = {
   // 1. CONTENT: Tell Tailwind to scan your HTML file for classes
   content: [
-    "./index.html", 
+    "./src/renderer/html/*.html", 
+    "./src/renderer/ts/*.ts", 
     // You can add "./*.js" later if you use JavaScript files for structure
   ],
   theme: {

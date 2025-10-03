@@ -1,16 +1,12 @@
 {
   "compilerOptions": {
     // 1. FILE LAYOUT (Keep these as set before)
-    "rootDir": ".", 
+    "rootDir": "./src", 
     "outDir": "./dist", 
 
-    // 2. ENVIRONMENT SETTINGS
     "module": "CommonJS", 
     "target": "ES2022", 
-    
-    // Add "DOM" to the lib array
     "lib": ["ES2022", "DOM"], 
-    
     "types": ["node", "electron"], 
     
     // ... other settings ...
@@ -27,5 +23,9 @@
     
   },
   
-  "include": ["main.ts", "preload.ts", "login.ts"] 
+  "include": [
+    "src/main/main.ts",
+    "preload.ts",
+    "src/renderer/html/*.html",
+    "src/renderer/ts/*.ts"] 
 }
