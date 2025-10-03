@@ -6,9 +6,9 @@
   "license": "MIT",
   "author": "John Michael",
   "type": "commonjs",
-  "main": "dist/main.js", 
+  "main": "dist/main/main.js", 
   "scripts": {
-    "build:css": "tailwindcss -i ./src/input.css -o ./styles.css",
+    "build:css": "tailwindcss -i ./src/styles/input.css -o ./dist/styles.css",
     "build:ts": "tsc", 
     "start": "npm run build:css && npm run build:ts && electron .",
     "test": "echo \"Error: no test specified\" && exit 1"
