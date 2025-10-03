@@ -82,10 +82,12 @@ npx tsc --init
 ```
 **package.json**
 ```
-"scripts": {
-  "build:ts": "tsc",
-  "start": "npm run build:ts && electron ."
-}
+  "scripts": {
+    "build:css": "tailwindcss -i ./src/styles/input.css -o ./dist/styles.css",
+    "build:ts": "tsc", 
+    "start": "npm run build:css && npm run build:ts && electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
 ```
 
 
