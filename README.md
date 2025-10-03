@@ -7,16 +7,17 @@ Below are the setup instructions for **Electron** and **Tailwind CSS**.
 
 ## 🚀 Electron Setup
 
-### 1. Install Node.js
+**1. Install Node.js**
 - Download and install Node.js (Windows Installer `.msi`):  
   👉 [https://nodejs.org/en/download](https://nodejs.org/en/download)
 
-- Verify installation:
-  ```bash
-  node -v
-  npm -v
+Verify installation:
+```
+node -v
+npm -v
+```
 
-### 2. Create Project Directory
+**2. Create Project Directory**
 ```
 mkdir electron-login-app
 
@@ -29,12 +30,12 @@ git clone https://github.com/griffmass/Capstone-Desktop.git
 cd Capstone-Desktop
 ```
 
-### 3. Initialize Project
+**3. Initialize Project**
 ```
 npm init -y
 ```
 
-### 4. Install Electron
+**4. Install Electron**
 ```
 npm install electron --save-dev
 ```
@@ -47,18 +48,48 @@ npm install electron --save-dev
 
 ## 🎨 Tailwind CSS Setup
 
-### 1. Uninstall old Tailwind (if installed)
+**1. Uninstall old Tailwind (if installed)**
 ```
 npm uninstall tailwindcss
 ```
 
-### 2. Install Tailwind v3 with PostCSS and Autoprefixer
+**2. Install Tailwind v3 with PostCSS and Autoprefixer**
 ```
 npm install -D tailwindcss@3 postcss autoprefixer
 npx tailwindcss init -p
 ```
 
-### ▶️ Run the App
+## 🔧 TypeScript Setup
+```
+npm install -D typescript @types/node @types/electron
+```
+```
+npx tsc --init
+```
+**tsconfig.json**
+```
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "CommonJS",
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "strict": true,
+    "esModuleInterop": true,
+    "moduleResolution": "node"
+  }
+}
+```
+**package.json**
+```
+"scripts": {
+  "build:ts": "tsc",
+  "start": "npm run build:ts && electron ."
+}
+```
+
+
+**▶️ Run the App**
 ```
 npm start
 ```
