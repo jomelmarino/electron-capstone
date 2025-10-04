@@ -1,2 +1,18 @@
-# Instruct GitHub to ignore the generated CSS file for language statistics
+# Ignore generated CSS files in GitHub language stats
 styles.css linguist-generated=true
+
+# Ignore built HTML files (if in dist/ or public/)
+*.html linguist-generated=true
+
+# Ignore compiled JS files from TypeScript
+dist/* linguist-generated=true
+
+# Ignore Tailwind or PostCSS output (if applicable)
+build/* linguist-generated=true
+out/* linguist-generated=true
+
+# Treat documentation files as text, not code
+*.md linguist-documentation=true
+
+# Optional: ensure consistent line endings
+* text=auto

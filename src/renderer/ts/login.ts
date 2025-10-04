@@ -10,7 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // 2. Attach the event handler
-    // Use the correct SubmitEvent type for strict TypeScript
     form.addEventListener('submit', (e: SubmitEvent) => {
         e.preventDefault();
         
