@@ -5,6 +5,8 @@ Below are the setup instructions for **Electron** and **Tailwind CSS**.
 
 ---
 
+<div align="center"> <img src="https://raw.githubusercontent.com/griffmass/Capstone-Desktop/main/assets/readme/screenshot.png"> </div>
+
 ## 🚀 Electron Setup
 
 **1. Install Node.js**
