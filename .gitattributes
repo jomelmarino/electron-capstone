@@ -1,17 +1,17 @@
-# Ignore generated CSS files in GitHub language stats
-styles.css linguist-generated=true
+# Ignore all CSS files from GitHub Linguist stats
+*.css linguist-generated=true
+*.css linguist-detectable=false
 
-# Ignore built HTML files (if in dist/ or public/)
+# Also ignore built or generated files
+dist/* linguist-generated=true
+out/* linguist-generated=true
+build/* linguist-generated=true
+
+# Ignore HTML (optional, if you don’t want it counted)
 *.html linguist-generated=true
 
-# Ignore compiled JS files from TypeScript or build tools
-dist/* linguist-generated=true
-build/* linguist-generated=true
-out/* linguist-generated=true
-*.js linguist-generated=true
+# Keep TypeScript dominant
+*.ts linguist-detectable=true
 
-# Treat documentation files as text, not code
+# Treat markdown as documentation
 *.md linguist-documentation=true
-
-# Optional: ensure consistent line endings
-* text=auto
