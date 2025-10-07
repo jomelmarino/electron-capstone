@@ -7,11 +7,14 @@ dist/* linguist-generated=true
 out/* linguist-generated=true
 build/* linguist-generated=true
 
-# Ignore HTML (optional, if you don’t want it counted)
+# Ignore HTML
 *.html linguist-generated=true
+
+*.js linguist-generated=true
 
 # Keep TypeScript dominant
 *.ts linguist-detectable=true
 
 # Treat markdown as documentation
 *.md linguist-documentation=true
+
