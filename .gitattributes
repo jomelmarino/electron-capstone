@@ -4,12 +4,11 @@ styles.css linguist-generated=true
 # Ignore built HTML files (if in dist/ or public/)
 *.html linguist-generated=true
 
-# Ignore compiled JS files from TypeScript
+# Ignore compiled JS files from TypeScript or build tools
 dist/* linguist-generated=true
-
-# Ignore Tailwind or PostCSS output (if applicable)
 build/* linguist-generated=true
 out/* linguist-generated=true
+*.js linguist-generated=true
 
 # Treat documentation files as text, not code
 *.md linguist-documentation=true
