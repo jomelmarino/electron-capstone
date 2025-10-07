@@ -1,28 +1,32 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  // 1. CONTENT: Tell Tailwind to scan your HTML file for classes
   content: [
-    "./src/renderer/html/*.html", 
-    "./src/renderer/ts/*.ts", 
-    // You can add "./*.js" later if you use JavaScript files for structure
+    "./src/renderer/html/*.html",
+    "./src/renderer/ts/*.ts",
   ],
   theme: {
     extend: {
-      // 2. EXTEND: Define custom colors
       colors: {
-        // NEW BACKGROUND COLOR: #107DAC
-        'app-blue-new': '#107DAC', 
-
-        // Lighter blue for links/accents (kept from original mobile design)
-        'app-blue-light': '#1c7c9c', 
-        
-        // PRIMARY BUTTON COLOR: Use the new background blue for the main (remaining) button
-        'btn-primary-blue': '#107DAC', 
-        
-        // Link color (kept from original mobile design)
-        'link-blue': '#1c7c9c', 
+        'app-blue-new': '#107DAC',
+        'app-blue-light': '#1c7c9c',
+        'btn-primary-blue': '#107DAC',
+        'link-blue': '#1c7c9c',
+      },
+      textShadow: {
+        sm: '1px 1px 2px rgba(0,0,0,0.75)',
+        DEFAULT: '2px 2px 5px rgba(0,0,0,0.85)',
+        lg: '3px 3px 8px rgba(0,0,0,0.9)',
       },
     },
   },
-  plugins: [],
-}
+  plugins: [
+    function ({ addUtilities }) {
+      const newUtilities = {
+        '.text-shadow-sm': { textShadow: '1px 1px 2px rgba(0,0,0,0.75)' },
+        '.text-shadow': { textShadow: '2px 2px 5px rgba(0,0,0,0.85)' },
+        '.text-shadow-lg': { textShadow: '3px 3px 8px rgba(0,0,0,0.9)' },
+      };
+      addUtilities(newUtilities);
+    },
+  ],
+};
