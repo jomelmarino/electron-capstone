@@ -25,7 +25,7 @@
   
   "include": [
     "src/main/main.ts",
-    "preload.ts",
+    "src/main/preload.ts",
     "src/renderer/html/*.html",
     "src/renderer/ts/*.ts"] 
 }
