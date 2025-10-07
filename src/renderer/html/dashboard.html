@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- This tells the Content Security Policy to allow loading local resources, including images -->
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline'; img-src 'self' data:;">
+    <title>KVSHS Admin Dashboard</title>
+    <!-- The path is relative from this HTML file to the compiled CSS in the dist folder -->
+    <link rel="stylesheet" href="../../../dist/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Using Poppins font as requested for a modern look -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Applying the Poppins font family */
+        body {
+            font-family: 'Poppins', sans-serif;
+            /* Prevents scrolling for the main body */
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Main container for the two-part background -->
+    <div class="relative min-h-screen">
+        <!-- Top blue background section -->
+        <div class="absolute top-0 left-0 w-full h-1/2 bg-gradient-to-br from-blue-500 to blue-600"></div>
+        <!-- Bottom white background section -->
+        <div class="absolute bottom-0 left-0 w-full h-1/2 bg-gray-50"></div>
+
+        <!-- Absolutely Positioned Header Text -->
+        <div class="absolute -top-5 -right-3 p-8 text-lg font-bold text-white text-shadow">KVSHS</div>
+
+        <!-- Content Wrapper -->
+        <div class="relative flex">
+            <!-- Sidebar -->
+            <aside class="w-64 h-[95vh] my-4 ml-4 bg-white rounded-2xl shadow-lg flex flex-col">
+                <!-- Logo and Title -->
+                <div class="p-6 flex items-center justify-center gap-2">
+                    <img src="../../../assets/logo/Logo.png" alt="KVSHS Logo" class="h-10 w-10">
+                    <span class="font-bold text-lg text-gray-500">KVSHS Admin</span>
+                </div>
+                
+                <!-- Divider -->
+                <hr class="mx-6 border-t-2 border-gray-200" />
+
+                <!-- Navigation Links -->
+                <nav class="flex-1 px-4 py-6 space-y-2">
+                    <a href="#" class="flex items-center px-4 py-2.5 text-white bg-blue-500/70 rounded-xl">
+                        <!-- Heroicon: Home -->
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+                        <span class="ml-3 font-medium">Dashboard</span>
+                    </a>
+                    <a href="#" class="flex items-center px-4 py-2.5 text-gray-600 hover:bg-blue-100 hover:text-blue-600 rounded-xl transition-all duration-200">
+                        <!-- Heroicon: Users -->
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                        <span class="ml-3 font-medium">Students</span>
+                    </a>
+                    <a href="#" class="flex items-center px-4 py-2.5 text-gray-600 hover:bg-blue-100 hover:text-blue-600 rounded-xl transition-all duration-200">
+                        <!-- Heroicon: User Add -->
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z"></path></svg>
+                        <span class="ml-3 font-medium">New Enrollees</span>
+                    </a>
+                    <a href="#" class="flex items-center px-4 py-2.5 text-gray-600 hover:bg-blue-100 hover:text-blue-600 rounded-xl transition-all duration-200">
+                        <!-- Heroicon: Document Text -->
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                        <span class="ml-3 font-medium">Requests</span>
+                    </a>
+                </nav>
+                
+                <!-- Logout Button at the bottom -->
+                <div class="mt-auto p-4">
+                    <button id="logout-btn" class="w-full bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-semibold py-2.5 px-4 rounded-xl transition-all duration-300 shadow-md hover:shadow-lg">
+                        Log out
+                    </button>
+                </div>
+            </aside>
+
+            <!-- Main Content -->
+            <main class="flex-1 flex flex-col h-screen">
+                <div class="p-8 flex-grow">
+                    <!-- Header -->
+                    <header class="flex justify-between items-center mb-8">
+                        <h1 class="text-2xl font-bold text-white">Dashboard</h1>
+                    </header>
+
+                    <!-- Stats Cards -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 mb-8">
+                        <!-- STEM Card -->
+                        <div class="bg-white p-6 h-40 rounded-xl shadow-md flex items-center justify-between">
+                            <div>
+                                <p class="font-bold text-gray-600 uppercase">STEM STUDENTS</p>
+                                <p class="text-4xl font-semibold text-gray-600 mt-2">43</p>
+                            </div>
+                            <div class="bg-gradient-to-tr from-green-400 to-600 p-4 rounded-full shadow-lg">
+                                 <svg class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-witdth="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>/svg>
+                            </div>
+                        </div>
+                        <!-- ABM Card -->
+                        <div class="bg-white p-6 h-40 rounded-xl shadow-md flex items-center justify-between">
+                            <div>
+                                <p class="font-bold text-gray-600 uppercase">ABM STUDENTS</p>
+                                <p class="text-4xl font-semibold text-gray-600 mt-2">17</p>
+                            </div>
+                            <div class="bg-gradient-to-tr from-blue-400 to-blue-600 p-4 rounded-full shadow-lg">
+                                <svg class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg>
+
+                            </div>
+                        </div>
+                        <!-- TVL-ICT Card -->
+                        <div class="bg-white p-6 h-40 rounded-xl shadow-md flex items-center justify-between">
+                            <div>
+                                <p class="font-bold text-gray-600 uppercase">TVL-ICT STUDENTS</p>
+                                <p class="text-4xl font-semibold text-gray-600 mt-2">41</p>
+                            </div>
+                            <div class="bg-gradient-to-tr from-teal-400 to-teal-600 p-4 rounded-full shadow-lg">
+                                <svg class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.096 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                            </div>
+                        </div>
+                        <!-- HUMSS Card -->
+                        <div class="bg-white p-6 h-40 rounded-xl shadow-md flex items-center justify-between">
+                            <div>
+                                <p class="font-bold text-gray-600 uppercase">HUMSS STUDENTS</p>
+                                <p class="text-4xl font-semibold text-gray-600 mt-2">58</p>
+                            </div>
+                            <div class="bg-gradient-to-tr from-purple-400 to-purple-600 p-4 rounded-full shadow-lg">
+                                <svg class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path d="M12 14l9-5-9-5-9 5 9 5z"></path><path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222 4 2.222V20M1 14v5h22v-5"></path></svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Main Content Panels -->
+                    <div class="flex flex-col gap-8">
+                        <!-- Recent Enrollment Applications Table -->
+                        <div class="bg-white p-6 rounded-xl shadow-md flex-grow">
+                             <div class="flex justify-between items-center border-b-2 border-gray-300 pb-2 mb-4">
+                                <h2 class="text-lg font-bold text-gray-600">RECENT ENROLLMENT APPLICATIONS:</h2>
+                                <a href="#" class="text-sm font-medium text-gray-600 hover:text-black bg-gray-100 hover:bg-gray-200 px-3 py-1 rounded-lg transition-all duration-200">See All</a>                            
+                            </div>
+                            <div class="overflow-x-auto">
+                                <table class="w-full text-sm text-left text-gray-500">
+                                    <thead class="text-xs text-gray-700 uppercase bg-gray-50">
+                                        <tr>
+                                            <th scope="col" class="py-3 px-6">Name</th>
+                                            <th scope="col" class="py-3 px-6">Strand</th>
+                                            <th scope="col" class="py-3 px-6">Year Level</th>
+                                            <th scope="col" class="py-3 px-6">Semester</th>
+                                            <th scope="col" class="py-3 px-6">Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="bg-white border-b">
+                                            <td class="py-4 px-6">Aron James Betinol</td>
+                                            <td class="py-4 px-6">TVL-ICT</td>
+                                            <td class="py-4 px-6 pl-12">11</td>
+                                            <td class="py-4 px-6 pl-12">1st</td>
+                                            <td class="py-4 px-6"><span class="bg-yellow-100 text-yellow-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">Pending</span></td>
+                                        </tr>
+                                        <tr class="bg-gray-50 border-b">
+                                            <td class="py-4 px-6">Jomel Marino</td>
+                                            <td class="py-4 px-6">STEM</td>
+                                            <td class="py-4 px-6 pl-12">11</td>
+                                            <td class="py-4 px-6 pl-12">1st</td>
+                                            <td class="py-4 px-6"><span class="bg-yellow-100 text-yellow-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">Pending</span></td>
+                                        </tr>
+                                        <tr class="bg-white">
+                                            <td class="py-4 px-6">Jennelyn Serante</td>
+                                            <td class="py-4 px-6">ABM</td>
+                                            <td class="py-4 px-6 pl-12">11</td>
+                                            <td class="py-4 px-6 pl-12">1st</td>
+                                            <td class="py-4 px-6"><span class="bg-yellow-100 text-yellow-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">Pending</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        
+                        <!-- Enrollment Count Panel -->
+                        <div class="bg-white p-6 rounded-xl shadow-lg xl:w-1/3">
+                            <div class="border-b-2 border-gray-400 pb-2 mb-4">
+                                <h2 class="text-lg font-bold text-gray-600">NO. OF ENROLLMENT APPLICATIONS:</h2>
+                            </div>
+                            <div class="space-y-4 text-gray-600">
+                              <div class="flex items-center">
+                                <div class="w-2 h-2 bg-yellow-400 rounded-full mr-3"></div>
+                                <div class="flex justify-between w-full">
+                                    <span>Pending</span>
+                                    <span>15</span>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center">
+                                <div class="w-2 h-2 bg-green-400 rounded-full mr-3"></div>
+                                <div class="flex justify-between w-full">
+                                    <span>Approved</span>
+                                    <span>1</span>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center">
+                                <div class="w-2 h-2 bg-red-400 rounded-full mr-3"></div>
+                                <div class="flex justify-between w-full">
+                                    <span>Rejected</span>
+                                    <span>0</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Footer -->
+                <footer class="w-full px-15 py-2">
+                <div class="flex justify-between items-center text-sm text-gray-600">
+                    <span>
+                    © 2025, developed by 
+                    <span class="font-bold text-gray-800">SIRI.JS</span>
+                    for a better desktop.
+                    </span>
+                    <a href="#" class="font-semibold hover:text-blue-500">About Us</a>
+                </div>
+                </footer>
+            </main>
+        </div>
+    </div>
+    <!-- The path is relative from this HTML file to the compiled JS in the dist folder -->
+    <script src="../../../dist/renderer/ts/dashboard.js" defer></script>
+</body>
+</html>
+
