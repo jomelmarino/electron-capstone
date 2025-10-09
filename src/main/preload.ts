@@ -5,10 +5,10 @@
 import { contextBridge } from 'electron';
 
 // This simple bridge exposes nothing, but fulfills the path requirement.
-// In the future, you will use contextBridge.exposeInMainWorld here 
+// In the future, you will use contextBridge.exposeInMainWorld here
 // to safely expose functions for login, navigation, database calls, etc.
 contextBridge.exposeInMainWorld('api', {
-    // You will define your safe, sandboxed functions here later
+  // You will define your safe, sandboxed functions here later
 });
 
 console.log('Preload script loaded successfully.');

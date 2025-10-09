@@ -3,17 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- This tells the Content Security Policy to allow loading local resources, including images -->
     <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline'; img-src 'self' data:;">
     <title>KVSHS Admin Dashboard</title>
-    <!-- The path is relative from this HTML file to the compiled CSS in the dist folder -->
     <link rel="stylesheet" href="../../../dist/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- Using Poppins font as requested for a modern look -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        /* Applying the Poppins font family */
+         /* Applying the Poppins font family */
         body {
             font-family: 'Poppins', sans-serif;
             /* Prevents scrolling for the main body */
@@ -24,65 +21,20 @@
 <body class="antialiased">
 
     <!-- Main container for the two-part background -->
-    <div class="relative min-h-screen">
-        <!-- Top blue background section -->
-        <div class="absolute top-0 left-0 w-full h-1/2 bg-gradient-to-br from-blue-500 to blue-600"></div>
-        <!-- Bottom white background section -->
-        <div class="absolute bottom-0 left-0 w-full h-1/2 bg-gray-50"></div>
+    <div class="absolute inset-0 -z-10">
+        <div class="w-full h-[450px] bg-gradient-to-br from-blue-500 to-blue-50"></div>
+        <div class="w-full h-full bg-gray-100 -mt-[2px]"></div> <!-- Clean overlap -->
+    </div>
 
-        <!-- Absolutely Positioned Header Text -->
-        <div class="absolute -top-5 -right-3 p-8 text-lg font-bold text-white text-shadow">KVSHS</div>
-
-        <!-- Content Wrapper -->
-        <div class="relative flex">
-            <!-- Sidebar -->
-            <aside class="w-64 h-[95vh] my-4 ml-4 bg-white rounded-2xl shadow-lg flex flex-col">
-                <!-- Logo and Title -->
-                <div class="p-6 flex items-center justify-center gap-2">
-                    <img src="../../../assets/logo/Logo.png" alt="KVSHS Logo" class="h-10 w-10">
-                    <span class="font-bold text-lg text-gray-500">KVSHS Admin</span>
-                </div>
-                
-                <!-- Divider -->
-                <hr class="mx-6 border-t-2 border-gray-200" />
-
-                <!-- Navigation Links -->
-                <nav class="flex-1 px-4 py-6 space-y-2">
-                    <a href="#" class="flex items-center px-4 py-2.5 text-white bg-blue-500/70 rounded-xl">
-                        <!-- Heroicon: Home -->
-                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
-                        <span class="ml-3 font-medium">Dashboard</span>
-                    </a>
-                    <a href="#" class="flex items-center px-4 py-2.5 text-gray-600 hover:bg-blue-100 hover:text-blue-600 rounded-xl transition-all duration-200">
-                        <!-- Heroicon: Users -->
-                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
-                        <span class="ml-3 font-medium">Students</span>
-                    </a>
-                    <a href="#" class="flex items-center px-4 py-2.5 text-gray-600 hover:bg-blue-100 hover:text-blue-600 rounded-xl transition-all duration-200">
-                        <!-- Heroicon: User Add -->
-                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z"></path></svg>
-                        <span class="ml-3 font-medium">New Enrollees</span>
-                    </a>
-                    <a href="#" class="flex items-center px-4 py-2.5 text-gray-600 hover:bg-blue-100 hover:text-blue-600 rounded-xl transition-all duration-200">
-                        <!-- Heroicon: Document Text -->
-                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
-                        <span class="ml-3 font-medium">Requests</span>
-                    </a>
-                </nav>
-                
-                <!-- Logout Button at the bottom -->
-                <div class="mt-auto p-4">
-                    <button id="logout-btn" class="w-full bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-semibold py-2.5 px-4 rounded-xl transition-all duration-300 shadow-md hover:shadow-lg">
-                        Log out
-                    </button>
-                </div>
-            </aside>
-
+    <div class="relative flex min-h-screen">
+        
+        <!-- Sidebar Component -->
+        <div id="sidebar-container"></div>
             <!-- Main Content -->
             <main class="flex-1 flex flex-col h-screen">
                 <div class="p-8 flex-grow">
                     <!-- Header -->
-                    <header class="flex justify-between items-center mb-8">
+                    <header class="flex justify-between items-center mb-8 mt-5">
                         <h1 class="text-2xl font-bold text-white">Dashboard</h1>
                     </header>
 
@@ -210,22 +162,11 @@
                     </div>
                 </div>
 
-                <!-- Footer -->
-                <footer class="w-full px-15 py-2">
-                <div class="flex justify-between items-center text-sm text-gray-600">
-                    <span>
-                    © 2025, developed by 
-                    <span class="font-bold text-gray-800">SIRI.JS</span>
-                    for a better desktop.
-                    </span>
-                    <a href="#" class="font-semibold hover:text-blue-500">About Us</a>
-                </div>
-                </footer>
+                <!-- Footer Component -->
+                <div id="footer-container"></div>
             </main>
         </div>
     </div>
-    <!-- The path is relative from this HTML file to the compiled JS in the dist folder -->
-    <script src="../../../dist/renderer/ts/dashboard.js" defer></script>
+    <script src="../../../dist/renderer/component/ts/component.js" defer></script>
 </body>
 </html>
-

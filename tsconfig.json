@@ -1,31 +1,19 @@
 {
   "compilerOptions": {
-    // 1. FILE LAYOUT (Keep these as set before)
-    "rootDir": "./src", 
-    "outDir": "./dist", 
-
-    "module": "CommonJS", 
-    "target": "ES2022", 
-    "lib": ["ES2022", "DOM"], 
-    "types": ["node", "electron"], 
-    
-    // ... other settings ...
-    
-    "esModuleInterop": true, 
+    "rootDir": "./src",
+    "outDir": "./dist",
+    "module": "CommonJS",
+    "target": "ES2022",
+    "lib": ["ES2022", "DOM"],
+    "types": ["node", "electron"],
+    "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-    "moduleResolution": "node", 
-
-    "strict": true, 
+    "moduleResolution": "node",
+    "strict": true,
     "skipLibCheck": true,
     "noImplicitReturns": true,
     "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    
+    "noUnusedParameters": true
   },
-  
-  "include": [
-    "src/main/main.ts",
-    "src/main/preload.ts",
-    "src/renderer/html/*.html",
-    "src/renderer/ts/*.ts"] 
+  "include": ["src/**/*.ts"]
 }
