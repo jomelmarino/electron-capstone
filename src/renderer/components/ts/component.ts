@@ -53,5 +53,5 @@ function initializeSidebarLogic(): void {
 
 // --- Load Components ---
 // 3. MODIFIED: We now pass our new function as a callback when loading the sidebar.
-fetchAndInject('../component/html/sidebar.html', 'sidebar-container', initializeSidebarLogic);
-fetchAndInject('../component/html/footer.html', 'footer-container');
+fetchAndInject('../components/html/sidebar.html', 'sidebar-container', initializeSidebarLogic);
+fetchAndInject('../components/html/footer.html', 'footer-container');

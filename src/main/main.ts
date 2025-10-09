@@ -18,7 +18,7 @@ const createWindow = (): void => {
 
   const mainWindow = new BrowserWindow(windowOptions);
 
-  mainWindow.loadFile('src/renderer/html/index.html');
+  mainWindow.loadFile('src/renderer/frontend/index.html');
 };
 
 app.whenReady().then(() => {

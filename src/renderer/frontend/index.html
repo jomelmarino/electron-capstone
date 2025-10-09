@@ -30,7 +30,7 @@
         <div class="p-8 md:p-12">
           <!-- Header Section with Logo -->
           <div class="flex items-center gap-3 mb-8">
-            <img src="../../../assets/logo/Logo.png" alt="School Logo" class="w-10 h-10" />
+            <img src="../../../assets/icon/Logo.png" alt="School Logo" class="w-10 h-10" />
             <h1 class="text-2xl font-bold text-gray-600">KVSHS Admin Login</h1>
           </div>
 
@@ -54,12 +54,32 @@
               <label for="password" class="block text-sm font-medium text-gray-700 mb-2"
                 >Password</label
               >
-              <input
-                type="password"
-                id="password"
-                placeholder="••••••••••••"
-                class="w-full p-3 bg-white border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 transition duration-200"
-              />
+              <div class="relative">
+                <input
+                  type="password"
+                  id="password"
+                  placeholder="••••••••••••"
+                  class="w-full p-3 pr-10 bg-white border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 transition duration-200"
+                />
+                <button type="button" id="togglePassword" class="absolute inset-y-0 right-0 flex items-center pr-3 cursor-pointer hover:opacity-80 transition">
+                  <svg class="w-0 h-0 absolute">
+                    <defs>
+                      <linearGradient id="eyeGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" style="stop-color:#3b82f6;" /> <stop offset="100%" style="stop-color:#1d4ed8;" /> </linearGradient>
+                    </defs>
+                  </svg>
+                  <svg id="eye-icon" class="w-6 h-6" viewBox="0 0 200 120" fill="url(#eyeGradient)">
+                    <path d="M100 0C40 0 0 40 0 60s40 60 100 60 100-40 100-60S160 0 100 0zm0 100c-22.09 0-40-17.91-40-40s17.91-40 40-40 40 17.91 40 40-17.91 40-40 40zm0-70c-16.57 0-30 13.43-30 30s13.43 30 30 30 30-13.43 30-30-13.43-30-30-30z"/>
+                  </svg>
+                  <svg id="eye-slash-icon" class="w-6 h-6 hidden" viewBox="0 0 200 120" fill="url(#eyeGradient)">
+                     <path d="M100 0C40 0 0 40 0 60s40 60 100 60 100-40 100-60S160 0 100 0zm0 100c-22.09 0-40-17.91-40-40s17.91-40 40-40 40 17.91 40 40-17.91 40-40 40zm0-70c-16.57 0-30 13.43-30 30s13.43 30 30 30 30-13.43 30-30-13.43-30-30-30z" mask="url(#slash-mask)"/>
+                     <mask id="slash-mask">
+                        <rect x="0" y="0" width="200" height="120" fill="white"/>
+                        <path d="M10 110L190 10L190 20L10 120Z" fill="black"/>
+                     </mask>
+                  </svg>
+                </button>
+              </div>
             </div>
 
             <div class="flex items-center">
@@ -80,7 +100,7 @@
             >
               Log In
             </button>
-
+            
             <div class="text-center pt-2">
               <a href="#" class="font-medium text-sm text-blue-600 hover:text-blue-500"
                 >Forgot Password?</a
@@ -120,6 +140,6 @@
       </div>
     </div>
 
-    <script src="../../../dist/renderer/ts/index.js"></script>
+    <script src="../../../dist/renderer/backend/index.js"></script>
   </body>
 </html>
