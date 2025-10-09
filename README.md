@@ -23,7 +23,11 @@ A modern, cross-platform desktop application for school administration, built wi
 </p>
 
 <div align="center">
-<img src="https://raw.githubusercontent.com/griffmass/Capstone-Desktop/main/assets/readme/screenshot.png" alt="Project Screenshot" width="80%">
+<img src="https://raw.githubusercontent.com/griffmass/Capstone-Desktop/main/assets/readme/login.png" alt="Project Screenshot" width="80%">
+</div>
+
+<div align="center">
+<img src="https://raw.githubusercontent.com/griffmass/Capstone-Desktop/main/assets/readme/dashboard.png" alt="Project Screenshot" width="80%">
 </div>
 
 <h3>About The Project</h3>
