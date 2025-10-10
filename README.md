@@ -23,11 +23,11 @@ A modern, cross-platform desktop application for school administration, built wi
 </p>
 
 <div align="center">
-<img src="https://raw.githubusercontent.com/griffmass/Capstone-Desktop/main/assets/screenshot/screenshot1.png" alt="Project Screenshot" width="80%">
+<img src="https://raw.githubusercontent.com/griffmass/kvshs-school-management/main/assets/screenshot/screenshot1.png" alt="Project Screenshot" width="80%">
 </div>
 
 <div align="center">
-<img src="https://raw.githubusercontent.com/griffmass/Capstone-Desktop/main/assets/screenshot/screenshot2.png" alt="Project Screenshot" width="80%">
+<img src="https://raw.githubusercontent.com/griffmass/kvshs-school-management/main/assets/screenshot/screenshot2.png" alt="Project Screenshot" width="80%">
 </div>
 
 <h3>About The Project</h3>
@@ -83,7 +83,7 @@ This will open the Electron window with the login screen.
 
 <h3>🔧 Project Configuration Details</h3>
 <details>
-<summary><strong>Tap to view framework setup commands</strong></summary>
+<summary><strong>Click to view framework setup commands</strong></summary>
 
 <h3>Tailwind CSS Setup</h3>
 
@@ -116,7 +116,7 @@ npx tsc --init
 </details>
 
 <details>
-<summary><strong>Tap to view configuration file contents</strong></summary>
+<summary><strong>Click to view configuration file contents</strong></summary>
 
 Here are the essential configurations for `package.json` and `tsconfig.json`.
 
