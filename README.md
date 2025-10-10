@@ -23,11 +23,11 @@ A modern, cross-platform desktop application for school administration, built wi
 </p>
 
 <div align="center">
-<img src="https://raw.githubusercontent.com/griffmass/Capstone-Desktop/main/assets/screenshot/screenshot1.png" alt="Project Screenshot" width="80%">
+<img src="https://raw.githubusercontent.com/griffmass/kvshs-school-management/main/assets/screenshot/screenshot1.png" alt="Project Screenshot" width="80%">
 </div>
 
 <div align="center">
-<img src="https://raw.githubusercontent.com/griffmass/Capstone-Desktop/main/assets/screenshot/screenshot2.png" alt="Project Screenshot" width="80%">
+<img src="https://raw.githubusercontent.com/griffmass/kvshs-school-management/main/assets/screenshot/screenshot2.png" alt="Project Screenshot" width="80%">
 </div>
 
 <h3>About The Project</h3>
